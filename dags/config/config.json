@@ -1,0 +1,11 @@
+{
+    "neo4j": {
+        "host": "",
+        "port": "",
+        "login": "",
+        "password": ""
+    },
+
+    "root_path": "/opt/airflow/",
+    "file_path": "dags/data/Q9Y261.xml"
+}
