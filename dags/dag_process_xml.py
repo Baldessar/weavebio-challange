@@ -16,7 +16,6 @@ file_path = config['file_path']
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'email': ['airflow@example.com'],
 }
 
 with DAG(
@@ -30,7 +29,7 @@ with DAG(
     t1 = PythonOperator(
         task_id='process_xml',
         python_callable=process_xml_file,
-        op_args=[root_path+file_path, 1000, config['neo4j']['host'], config['neo4j']['port'], config['neo4j']['login'], config['neo4j']['password']]
+        op_args=[root_path+file_path, config['neo4j']['host'], config['neo4j']['port']]
     )
 
     t1
